@@ -1,4 +1,0 @@
-name: Seichi
-version: '${version}'
-main: com.github.ardririy.seichi.Seichi
-authors: [ ardririy ]
