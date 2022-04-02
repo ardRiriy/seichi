@@ -24,9 +24,9 @@ public class PlayerListener implements Listener {
         UUID uuid = player.getUniqueId();
 
 
-        final String URL = "jdbc:sqlite:sample.db";
+        final String URL = "jdbc:sqlite:playerDate.db";
         final String sqlSelect = "select uuid from player where uuid = ?;";
-        final String sqlInsert = "insert into player(name, uuid) VALUES(?, ?)";
+        final String sqlInsert = "insert into player(name, uuid, digging) VALUES(?, ?, ?)";
         final String sqlUpdate = "update player set name = ?";
 
         //db接続
@@ -48,6 +48,7 @@ public class PlayerListener implements Listener {
                         try(PreparedStatement ps = conn.prepareStatement(sqlInsert)){
                             ps.setString(1, name);
                             ps.setString(2, String.valueOf(uuid));
+                            ps.setInt(3,0);
 
                             ps.executeUpdate();
                             conn.commit();
