@@ -15,7 +15,7 @@ public class PlayerListener implements Listener {
     }
 
     @EventHandler
-    public void onPlayerJoin(PlayerJoinEvent event) throws SQLException {
+    public void onPlayerJoin(PlayerJoinEvent event){
 
         //データベースへの登録.Todo:別クラスに分けたい
         Player player = event.getPlayer();
