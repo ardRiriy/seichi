@@ -25,7 +25,5 @@ public final class Seichi extends JavaPlugin {
         // Plugin shutdown logic
     }
 
-    private static Plugin getPlugin(){
-        return plugin;
-    }
+
 }
