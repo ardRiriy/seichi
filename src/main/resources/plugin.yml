@@ -2,3 +2,6 @@ name: Seichi
 version: '${version}'
 main: com.github.ardririy.seichi.Seichi
 authors: [ ardririy ]
+commands:
+  grading:
+    description: 整地に関連する全般のコマンド.

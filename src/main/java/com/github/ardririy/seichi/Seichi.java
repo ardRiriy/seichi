@@ -11,19 +11,14 @@ public final class Seichi extends JavaPlugin {
     private static Plugin plugin;
     @Override
     public void onEnable() {
-        // Plugin startup logic
-        getLogger().info("Plugin is enabled");
-
         new PlayerListener(this);
 
+        //Event
         plugin = this;
         Bukkit.getServer().getPluginManager().registerEvents(new EventListener(), this);
-    }
 
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
+        //Command
+        getCommand("grading").setExecutor(new grading());
     }
-
 
 }
