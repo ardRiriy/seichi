@@ -1,6 +1,5 @@
 package com.github.ardririy.seichi;
 
-
 import java.sql.*;
 
 public class ConnectDB {
@@ -57,7 +56,6 @@ public class ConnectDB {
     public void atBlockBrake(String uuid){
         try(Connection conn = DriverManager.getConnection(URL)){
             conn.setAutoCommit(false);
-
 
             Integer dig_amount = getDigAmount(uuid);
 
