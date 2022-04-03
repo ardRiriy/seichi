@@ -82,9 +82,9 @@ public class ConnectDB {
                     String ranking = "";
                     while (rs.next()){
                         int n = 1;
-                        // n位 : name(x blocks)　と表示される
+                        // #n : name(x blocks)　と表示される
                         ranking =
-                                ranking + n + "位 : " + rs.getString("name") + "(" + rs.getInt("digging") + " blocks)\n";
+                                "#" + ranking + n + " : " + rs.getString("name") + "(" + rs.getInt("digging") + " blocks)\n";
                         n++;
                     }
                     return ranking;
