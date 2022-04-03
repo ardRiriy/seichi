@@ -3,6 +3,7 @@ package com.github.ardririy.seichi;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.HumanEntity;
 
 public class grading implements CommandExecutor {
     @Override
@@ -17,7 +18,9 @@ public class grading implements CommandExecutor {
 
         }else if(subCmmand.equalsIgnoreCase("trash")){
             //インベントリを閉じた際にアイテムが消滅するゴミ箱を表示
-            sender.sendMessage("Here is trash box");
+            Guis guis = new Guis();
+            guis.openTrashBox((HumanEntity) sender);
+
         }else{
             sender.sendMessage("/grading ranking - Show ranking");
             sender.sendMessage("/grading trash - Open trash box");
