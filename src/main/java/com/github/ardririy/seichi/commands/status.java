@@ -13,8 +13,8 @@ public class status implements CommandExecutor {
         Player player = (Player) sender;
 
         //実行したプレイヤーの採掘量を表示.
-        //Todo:実行者のRankingも同時に表示できるようにする.
-        sender.sendMessage(sender.getName() + " : " + cdb.getDigAmount(String.valueOf(player.getUniqueId())) + "blocks");
+        //Todo:実行者のRankingも同時に表示できるようにする.<-下準備は下からやれ(by4/5のおれ)
+        sender.sendMessage(sender.getName() + " : " + cdb.getDigAmount(player.getName()) + "blocks");
         return false;
     }
 }

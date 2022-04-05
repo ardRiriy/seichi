@@ -18,10 +18,9 @@ public class PlayerListener implements Listener {
     public void onBlockBreak(BlockBreakEvent e){
 
         Player player = e.getPlayer();
-        UUID uuid = player.getUniqueId();
 
         ConnectDB cdb = new ConnectDB();
-        cdb.atBlockBrake(String.valueOf(uuid));
+        cdb.atBlockBrake(player.getName());
     }
 
     @EventHandler
