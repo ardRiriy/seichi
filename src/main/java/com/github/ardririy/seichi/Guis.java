@@ -36,7 +36,7 @@ public class Guis implements Listener {
         map.put(Enchantment.DURABILITY, 10);
         item.addUnsafeEnchantments(map);
     }
-    // You can call this whenever you want to put the items in
+
     public void initializeItems() {
         //ここもうちょっときれいにしたい
         ItemStack pickaxe = new ItemStack(Material.DIAMOND_PICKAXE);
@@ -55,14 +55,11 @@ public class Guis implements Listener {
 
     }
 
-    // Nice little method to create a gui item with a custom name, and description
     protected ItemStack createGuiItem(final ItemStack item, final String name, final String... lore) {
         final ItemMeta meta = item.getItemMeta();
 
-        // Set the name of the item
         meta.setDisplayName(name);
 
-        // Set the lore of the item
         meta.setLore(Arrays.asList(lore));
 
         item.setItemMeta(meta);
