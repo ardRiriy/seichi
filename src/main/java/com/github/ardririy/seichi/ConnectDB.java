@@ -107,10 +107,10 @@ public class ConnectDB {
         //playerRankListに投げてリストを得て,文字列一致で順位を得る.
         List<String> list = sortedRanking();
         Integer n = 0;
-        while(player.equalsIgnoreCase(list.get(n))){
+        while(!player.equalsIgnoreCase(list.get(n))){
             n++;
         }
-        return n;
+        return n+1;
     }
 
     public List<String> sortedRanking(){
